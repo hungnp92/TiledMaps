@@ -43,10 +43,11 @@ namespace TiledMap_Ver1
                 List<Tile_DAL> listTile = new List<Tile_DAL>();
                 int sizetile_height = (int)Int32.Parse(this.nudTileHeight.Value.ToString());
                 int sizetile_width = (int)Int32.Parse(nudTileWidth.Value.ToString());
+
+                int[,] lMapCode = new int[Background.Width / sizetile_width,Background.Height / sizetile_height ];
+                
                 pgBar.Maximum = (Background.Width / sizetile_width) * (Background.Height / sizetile_height);
                 
-                int testW = Background.Width / sizetile_width;
-                int testH = Background.Height / sizetile_height;
                 pgBar.Value = 0;
                 try
                 {
@@ -66,6 +67,9 @@ namespace TiledMap_Ver1
                                 if (CompareImageWithList(listTile, _tile.imgTile))
                                     listTile.Add(_tile);
                             }
+
+                            //Write code map
+                            lMapCode[i,j] = _tile.IID;
 
                         }
                 }
@@ -135,12 +139,32 @@ namespace TiledMap_Ver1
         {
             foreach (Tile_DAL tile in listTile)
             {
-                tile.imgTile.Save("TiledMap//" + tile.StrTileName + ".png");
+                tile.imgTile.Save(txtPathSave.Text +"\\"+ tile.StrTileName + ".png");
                 //Console.WriteLine("save tile " + tile.IID);
             }
 
         }
         #endregion
+
+        private void btSaveto_Click(object sender, EventArgs e)
+        {
+            // sDialog = new OpenFileDialog();
+            //sDialog.Title = "Select where you want to save this tiles";
+            //if (sDialog.ShowDialog() == DialogResult.Yes)
+            //{
+            //    txtPathSave.Text = sDialog.FileName.ToString();
+            //}
+            FolderBrowserDialog fdialog = new FolderBrowserDialog();
+            if (fdialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                txtPathSave.Text = fdialog.SelectedPath.ToString();
+            }
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }
