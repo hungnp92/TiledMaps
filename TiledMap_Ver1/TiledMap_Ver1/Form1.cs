@@ -32,7 +32,33 @@ namespace TiledMap_Ver1
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fDialog = new OpenFileDialog();
+            fDialog.Title = "Select file to be upload";
+            fDialog.Filter = "PNG Image(*.png)|*.png*";
+            //  fDialog.Filter = "PDF Files|*.pdf";
+            if (fDialog.ShowDialog() == DialogResult.OK)
+            {
+                tbLocated.Text = fDialog.FileName.ToString();
+                Background = Image.FromFile(tbLocated.Text);
+                tbSize.Text = "" + Background.Size.Width + " x " + Background.Size.Height;
+                Util.SourceImage = Image.FromFile(tbLocated.Text);
+                Util.bmp = new Bitmap(Util.SourceImage);
+            }
+        }
+
+        private void btSaveto_Click_1(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fdialog = new FolderBrowserDialog();
+            if (fdialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                txtPathSave.Text = fdialog.SelectedPath.ToString();
+            }
+        }
+
+        private void btnProcced_Click(object sender, EventArgs e)
         {
             if (tbTileName.Text == null)        
             {
@@ -81,31 +107,12 @@ namespace TiledMap_Ver1
                 SaveImage(listTile);
                 MessageBox.Show("Process complete! Congratulation!", "Success", MessageBoxButtons.OK);
             }
-            
         }
 
-        //cancel button
-        private void button3_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        //Get image path
-        private void button2_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog fDialog = new OpenFileDialog();
-            fDialog.Title = "Select file to be upload";
-            fDialog.Filter = "PNG Image(*.png)|*.png*";
-            //  fDialog.Filter = "PDF Files|*.pdf";
-            if (fDialog.ShowDialog() == DialogResult.OK)
-            {       
-                tbLocated.Text = fDialog.FileName.ToString();
-                Background = Image.FromFile(tbLocated.Text);
-                tbSize.Text = "" + Background.Size.Width + " x " + Background.Size.Height;
-                Util.SourceImage = Image.FromFile(tbLocated.Text);
-                Util.bmp = new Bitmap(Util.SourceImage);
-            }
-
+            this.Dispose();
         }
         #endregion
 
@@ -146,25 +153,9 @@ namespace TiledMap_Ver1
         }
         #endregion
 
-        private void btSaveto_Click(object sender, EventArgs e)
-        {
-            // sDialog = new OpenFileDialog();
-            //sDialog.Title = "Select where you want to save this tiles";
-            //if (sDialog.ShowDialog() == DialogResult.Yes)
-            //{
-            //    txtPathSave.Text = sDialog.FileName.ToString();
-            //}
-            FolderBrowserDialog fdialog = new FolderBrowserDialog();
-            if (fdialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                txtPathSave.Text = fdialog.SelectedPath.ToString();
-            }
-        }
+        
 
-        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
-        {
-
-        }
+        
 
     }
 }

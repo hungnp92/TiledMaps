@@ -30,33 +30,33 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.btSaveto = new System.Windows.Forms.Button();
-            this.txtPathSave = new System.Windows.Forms.TextBox();
             this.pgBar = new System.Windows.Forms.ProgressBar();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btSaveto = new System.Windows.Forms.Button();
+            this.tbTileName = new System.Windows.Forms.TextBox();
+            this.txtPathSave = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.nudTileWidth = new System.Windows.Forms.NumericUpDown();
             this.nudTileHeight = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tbTileName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnProcced = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbSize = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.tbLocated = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnProcced = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTileWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTileHeight)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,33 +85,6 @@
             this.tabPage1.Text = "Split image";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(784, 382);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Read codemap";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btSaveto
-            // 
-            this.btSaveto.Location = new System.Drawing.Point(618, 124);
-            this.btSaveto.Name = "btSaveto";
-            this.btSaveto.Size = new System.Drawing.Size(120, 40);
-            this.btSaveto.TabIndex = 5;
-            this.btSaveto.Text = "Save to...";
-            this.btSaveto.UseVisualStyleBackColor = true;
-            // 
-            // txtPathSave
-            // 
-            this.txtPathSave.Enabled = false;
-            this.txtPathSave.Location = new System.Drawing.Point(144, 129);
-            this.txtPathSave.Name = "txtPathSave";
-            this.txtPathSave.Size = new System.Drawing.Size(449, 31);
-            this.txtPathSave.TabIndex = 9;
-            // 
             // pgBar
             // 
             this.pgBar.Location = new System.Drawing.Point(65, 317);
@@ -127,6 +100,50 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btSaveto);
+            this.groupBox2.Controls.Add(this.tbTileName);
+            this.groupBox2.Controls.Add(this.txtPathSave);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.nudTileWidth);
+            this.groupBox2.Controls.Add(this.nudTileHeight);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(7, 134);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(761, 177);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tiles";
+            // 
+            // btSaveto
+            // 
+            this.btSaveto.Location = new System.Drawing.Point(618, 124);
+            this.btSaveto.Name = "btSaveto";
+            this.btSaveto.Size = new System.Drawing.Size(120, 40);
+            this.btSaveto.TabIndex = 5;
+            this.btSaveto.Text = "Save to...";
+            this.btSaveto.UseVisualStyleBackColor = true;
+            this.btSaveto.Click += new System.EventHandler(this.btSaveto_Click_1);
+            // 
+            // tbTileName
+            // 
+            this.tbTileName.Location = new System.Drawing.Point(144, 36);
+            this.tbTileName.Name = "tbTileName";
+            this.tbTileName.Size = new System.Drawing.Size(556, 31);
+            this.tbTileName.TabIndex = 2;
+            // 
+            // txtPathSave
+            // 
+            this.txtPathSave.Enabled = false;
+            this.txtPathSave.Location = new System.Drawing.Point(144, 129);
+            this.txtPathSave.Name = "txtPathSave";
+            this.txtPathSave.Size = new System.Drawing.Size(449, 31);
+            this.txtPathSave.TabIndex = 9;
             // 
             // label5
             // 
@@ -160,6 +177,15 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Tile Height";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Tile name";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -169,39 +195,30 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Tile Width";
             // 
-            // groupBox2
+            // btnProcced
             // 
-            this.groupBox2.Controls.Add(this.btSaveto);
-            this.groupBox2.Controls.Add(this.tbTileName);
-            this.groupBox2.Controls.Add(this.txtPathSave);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.nudTileWidth);
-            this.groupBox2.Controls.Add(this.nudTileHeight);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(7, 134);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(761, 177);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tiles";
+            this.btnProcced.Location = new System.Drawing.Point(465, 317);
+            this.btnProcced.Name = "btnProcced";
+            this.btnProcced.Size = new System.Drawing.Size(120, 40);
+            this.btnProcced.TabIndex = 6;
+            this.btnProcced.Text = "Process";
+            this.btnProcced.UseVisualStyleBackColor = true;
+            this.btnProcced.Click += new System.EventHandler(this.btnProcced_Click);
             // 
-            // tbTileName
+            // groupBox1
             // 
-            this.tbTileName.Location = new System.Drawing.Point(144, 36);
-            this.tbTileName.Name = "tbTileName";
-            this.tbTileName.Size = new System.Drawing.Size(556, 31);
-            this.tbTileName.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 25);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Tile name";
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.tbSize);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.btnBrowse);
+            this.groupBox1.Controls.Add(this.tbLocated);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(7, 9);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(761, 119);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tiled map";
             // 
             // label8
             // 
@@ -237,6 +254,7 @@
             this.btnBrowse.TabIndex = 1;
             this.btnBrowse.Text = "Browse..";
             this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // tbLocated
             // 
@@ -255,29 +273,15 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Located";
             // 
-            // btnProcced
+            // tabPage2
             // 
-            this.btnProcced.Location = new System.Drawing.Point(465, 317);
-            this.btnProcced.Name = "btnProcced";
-            this.btnProcced.Size = new System.Drawing.Size(120, 40);
-            this.btnProcced.TabIndex = 6;
-            this.btnProcced.Text = "Process";
-            this.btnProcced.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.tbSize);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.btnBrowse);
-            this.groupBox1.Controls.Add(this.tbLocated);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(7, 9);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(761, 119);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tiled map";
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(784, 382);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Read codemap";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -291,10 +295,10 @@
             this.Text = "Tiled Map";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudTileWidth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTileHeight)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTileWidth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTileHeight)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

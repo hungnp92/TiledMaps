@@ -16,3 +16,12 @@ C:\Users\10520_000\Desktop\Game UIT\TiledMap_Ver1\TiledMap_Ver1\obj\Debug\TiledM
 C:\Users\10520_000\Desktop\Game UIT\TiledMap_Ver1\TiledMap_Ver1\obj\Debug\TiledMap_Ver1.Form1.resources
 C:\Users\10520_000\Desktop\Game UIT\TiledMap_Ver1\TiledMap_Ver1\obj\Debug\TiledMap_Ver1.Properties.Resources.resources
 C:\Users\10520_000\Desktop\Game UIT\TiledMap_Ver1\TiledMap_Ver1\obj\Debug\TiledMap_Ver1.csproj.GenerateResource.Cache
+C:\Users\10520_000\Desktop\TiledMaps\TiledMap_Ver1\TiledMap_Ver1\bin\Debug\TiledMap_Ver1.exe.config
+C:\Users\10520_000\Desktop\TiledMaps\TiledMap_Ver1\TiledMap_Ver1\obj\Debug\TiledMap_Ver1.exe
+C:\Users\10520_000\Desktop\TiledMaps\TiledMap_Ver1\TiledMap_Ver1\obj\Debug\TiledMap_Ver1.pdb
+C:\Users\10520_000\Desktop\TiledMaps\TiledMap_Ver1\TiledMap_Ver1\bin\Debug\TiledMap_Ver1.exe
+C:\Users\10520_000\Desktop\TiledMaps\TiledMap_Ver1\TiledMap_Ver1\bin\Debug\TiledMap_Ver1.pdb
+C:\Users\10520_000\Desktop\TiledMaps\TiledMap_Ver1\TiledMap_Ver1\obj\Debug\TiledMap_Ver1.csprojResolveAssemblyReference.cache
+C:\Users\10520_000\Desktop\TiledMaps\TiledMap_Ver1\TiledMap_Ver1\obj\Debug\TiledMap_Ver1.Form1.resources
+C:\Users\10520_000\Desktop\TiledMaps\TiledMap_Ver1\TiledMap_Ver1\obj\Debug\TiledMap_Ver1.Properties.Resources.resources
+C:\Users\10520_000\Desktop\TiledMaps\TiledMap_Ver1\TiledMap_Ver1\obj\Debug\TiledMap_Ver1.csproj.GenerateResource.Cache
